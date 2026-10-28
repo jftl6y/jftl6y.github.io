@@ -1,0 +1,273 @@
+:root {
+  --bg: #0b1220;
+  --bg-soft: #121c2f;
+  --panel: #16233a;
+  --text: #eaf1ff;
+  --muted: #a8b7d4;
+  --accent: #6fb0ff;
+  --accent-strong: #3e8fff;
+  --border: #253858;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Sora", "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, var(--bg), #090f1a);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9cc8ff;
+}
+
+.shell {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 18, 32, 0.88);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.brand-tag {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-list a {
+  font-size: 0.92rem;
+}
+
+.hero {
+  padding: 5rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 0.9rem;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  line-height: 1.1;
+  font-size: clamp(1.9rem, 3.7vw, 3.2rem);
+}
+
+.lede {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.button-row {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent-strong);
+  color: #fff;
+  padding: 0.66rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #67a7ff;
+  color: #fff;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.button-secondary:hover {
+  border-color: #4c6ea8;
+  background: var(--panel);
+}
+
+.hero-cards {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #192b48, #13213a);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.panel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.section h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.6rem;
+}
+
+.section p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-item {
+  border-left: 3px solid var(--accent-strong);
+  padding: 0.2rem 0 0.2rem 1rem;
+}
+
+.timeline-meta {
+  margin: 0;
+  color: #90abda;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.85rem;
+}
+
+.timeline-item h3 {
+  margin: 0.35rem 0 0.4rem;
+}
+
+.timeline-item p {
+  margin: 0;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+  padding: 1.4rem 0 2.2rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.footer-name {
+  margin: 0 0 0.3rem;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: grid;
+  gap: 0.35rem;
+  text-align: right;
+}
+
+@media (max-width: 860px) {
+  .hero-grid,
+  .grid-two,
+  .footer-inner {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-links {
+    text-align: left;
+  }
+}
